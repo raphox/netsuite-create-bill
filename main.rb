@@ -19,7 +19,7 @@ NetSuite.configure do
   api_version '2024_2' # https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3418621.
 
   # wsdl "https://webservices.netsuite.com/wsdl/v#{api_version}/netsuite.wsdl"
-  wsdl_domain "#{account}.suitetalk.api.netsuite.com"
+  wsdl_domain "#{account.tr("_", "-")}.suitetalk.api.netsuite.com"
 
   # the endpoint indicated in the > 2018_2 WSDL is invalid
   # you must set the endpoint directly
